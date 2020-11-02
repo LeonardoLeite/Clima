@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Clima" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-dI-FUF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LHR-1E-VkU">
+                                <rect key="frame" x="20" y="64" width="335" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znd-c2-AjT">
+                                        <rect key="frame" x="0.0" y="1" width="44" height="42.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="5uV-Zf-IoZ"/>
+                                            <constraint firstAttribute="height" constant="44" id="QM6-aF-fqO"/>
+                                        </constraints>
+                                        <color key="tintColor" name="DayColor"/>
+                                        <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="getGpsLocationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uc0-JY-pN4"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYq-ND-owf">
+                                        <rect key="frame" x="54" y="0.0" width="227" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemFillColor"/>
+                                        <color key="textColor" name="DayColor"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWf-6g-x4N">
+                                        <rect key="frame" x="291" y="1" width="44" height="42.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="K20-2p-c49"/>
+                                            <constraint firstAttribute="height" constant="44" id="huY-MR-9MU"/>
+                                        </constraints>
+                                        <color key="tintColor" name="DayColor"/>
+                                        <state key="normal" backgroundImage="magnifyingglass.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Kx-Av-uCT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="isd-1f-4Af">
+                                <rect key="frame" x="20" y="128" width="270.33333333333331" height="120"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-0F-vYc">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <color key="tintColor" name="DayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="5X1-UY-0VX"/>
+                                            <constraint firstAttribute="width" constant="120" id="Rrv-jl-JpC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2NI-vt-4CB">
+                                        <rect key="frame" x="128" y="0.0" width="142.33333333333337" height="120"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="26ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCe-kY-9aQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="82"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="60"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recife" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOw-5u-0ku">
+                                                <rect key="frame" x="0.0" y="82" width="68.333333333333329" height="38"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="x2F-GI-oFb">
+                                <rect key="frame" x="72.666666666666686" y="268" width="230" height="101"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y8i-eg-BFd">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="101"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up.left.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="owN-zF-zxy">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="60" height="57"/>
+                                                <color key="tintColor" name="DayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="TZx-SO-tWH"/>
+                                                    <constraint firstAttribute="height" constant="60" id="akr-V4-jS2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22m/s        NW" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXX-FC-9KO">
+                                                <rect key="frame" x="0.0" y="60" width="60" height="41"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gSb-Kw-pep">
+                                        <rect key="frame" x="84.999999999999986" y="0.0" width="60.000000000000014" height="80.666666666666671"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-Iu-V9H">
+                                                <rect key="frame" x="0.0" y="-1.3333333333333321" width="60" height="59"/>
+                                                <color key="tintColor" name="DayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="7UE-p6-w1t"/>
+                                                    <constraint firstAttribute="width" constant="60" id="8di-Nv-A66"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:34" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2q-o7-xbT">
+                                                <rect key="frame" x="14" y="59.999999999999993" width="32" height="20.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FFY-Rg-K96">
+                                        <rect key="frame" x="170" y="0.0" width="60" height="80.666666666666671"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U79-6z-DHm">
+                                                <rect key="frame" x="0.0" y="-1.3333333333333321" width="60" height="59"/>
+                                                <color key="tintColor" name="DayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="Eov-6J-fBe"/>
+                                                    <constraint firstAttribute="height" constant="60" id="lJ2-hS-CPv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9er-y4-Y4j">
+                                                <rect key="frame" x="14.000000000000028" y="59.999999999999993" width="32" height="20.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5go-LK-gFt">
+                                <rect key="frame" x="102.66666666666669" y="389" width="170" height="156.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C57-Jx-hBF">
+                                        <rect key="frame" x="15.666666666666657" y="0.0" width="138.33333333333334" height="27.333333333333332"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcJ-J8-pxM">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ox-Ud-ymr">
+                                                <rect key="frame" x="90.666666666666671" y="0.0" width="47.666666666666671" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SXY-Fh-hDi">
+                                        <rect key="frame" x="0.0" y="32.333333333333314" width="170" height="27.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min/Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhZ-BH-92p">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.333333333333329" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/29ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6T-L7-MgP">
+                                                <rect key="frame" x="88.333333333333314" y="0.0" width="81.666666666666686" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SPa-ua-tYn">
+                                        <rect key="frame" x="17.666666666666657" y="64.666666666666686" width="134.33333333333334" height="27.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whf-9C-WqY">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="78%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsA-XB-WkO">
+                                                <rect key="frame" x="90.000000000000014" y="0.0" width="44.333333333333329" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kQ0-qw-g2A">
+                                        <rect key="frame" x="0.0" y="97" width="170" height="27.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-PI-cM2">
+                                                <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1013hPa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THP-12-Ods">
+                                                <rect key="frame" x="82.666666666666686" y="0.0" width="87.333333333333314" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HvZ-ja-C2r">
+                                        <rect key="frame" x="1.6666666666666572" y="129.33333333333337" width="166.66666666666666" height="27.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visibility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjE-Ft-qnk">
+                                                <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC6-EM-OsJ">
+                                                <rect key="frame" x="83.333333333333343" y="0.0" width="83.333333333333343" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" name="DayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LHR-1E-VkU" secondAttribute="trailing" constant="20" id="1OT-vn-4zv"/>
+                            <constraint firstItem="isd-1f-4Af" firstAttribute="top" secondItem="LHR-1E-VkU" secondAttribute="bottom" constant="20" id="6aL-ga-weI"/>
+                            <constraint firstItem="5go-LK-gFt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jd4-qA-MSY"/>
+                            <constraint firstItem="LHR-1E-VkU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M6y-qc-ile"/>
+                            <constraint firstAttribute="trailing" secondItem="6eU-dI-FUF" secondAttribute="trailing" id="Peq-YP-fRl"/>
+                            <constraint firstItem="x2F-GI-oFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y8e-LW-KKN"/>
+                            <constraint firstItem="6eU-dI-FUF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bcY-0N-6MN"/>
+                            <constraint firstItem="isd-1f-4Af" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="k4Q-GJ-c0w"/>
+                            <constraint firstItem="5go-LK-gFt" firstAttribute="top" secondItem="x2F-GI-oFb" secondAttribute="bottom" constant="20" id="l89-bs-MIz"/>
+                            <constraint firstItem="LHR-1E-VkU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lHv-ha-0pP"/>
+                            <constraint firstItem="x2F-GI-oFb" firstAttribute="top" secondItem="isd-1f-4Af" secondAttribute="bottom" constant="20" id="mKN-Hg-qpz"/>
+                            <constraint firstAttribute="bottom" secondItem="6eU-dI-FUF" secondAttribute="bottom" id="nHC-u0-IUp"/>
+                            <constraint firstItem="6eU-dI-FUF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vyv-Y4-gpf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="YOw-5u-0ku" id="2aA-WN-E87"/>
+                        <outlet property="feelsLikeLabel" destination="2Ox-Ud-ymr" id="6zM-Fm-m1K"/>
+                        <outlet property="humidityLabel" destination="IsA-XB-WkO" id="ieb-pu-P5f"/>
+                        <outlet property="maxMinLabel" destination="q6T-L7-MgP" id="Xpi-Vl-fbk"/>
+                        <outlet property="pressureLabel" destination="THP-12-Ods" id="Pxv-bA-XE4"/>
+                        <outlet property="searchTextField" destination="hYq-ND-owf" id="8AJ-cf-bGa"/>
+                        <outlet property="sunriseLabel" destination="Y2q-o7-xbT" id="Vgr-Pq-rQC"/>
+                        <outlet property="sunsetLabel" destination="9er-y4-Y4j" id="N18-aC-vrt"/>
+                        <outlet property="temperatureLabel" destination="KCe-kY-9aQ" id="0Lm-35-hAv"/>
+                        <outlet property="visibilityLabel" destination="MC6-EM-OsJ" id="ZOr-g0-YBU"/>
+                        <outlet property="weatherImageView" destination="LMR-0F-vYc" id="GNj-ZV-h38"/>
+                        <outlet property="windDirectionImageView" destination="owN-zF-zxy" id="0bd-jv-y7x"/>
+                        <outlet property="windVelocityLabel" destination="LXX-FC-9KO" id="qci-Ho-zD2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="500" height="500"/>
+        <image name="arrow.up.left.square" catalog="system" width="128" height="114"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <image name="sunrise" catalog="system" width="128" height="97"/>
+        <image name="sunset" catalog="system" width="128" height="97"/>
+        <namedColor name="DayColor">
+            <color red="0.57899999618530273" green="0.32199999690055847" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
